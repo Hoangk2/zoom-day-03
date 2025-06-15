@@ -8,6 +8,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- Font -->
@@ -23,6 +24,7 @@
 </head>
 
 <body>
+
     <div class="header">
         <ul class="header-list">
             <li class="header-list-item">
@@ -66,44 +68,64 @@
     </div>
 
     <div id="band">
-        <h2 class="band-title title">The Band</h2>
+        <div class="grid wide">
+            <h2 class="band-title title">The Band</h2>
 
-        <em class="band-slogan slogan">We love music</em>
+            <em class="band-slogan slogan">We love music</em>
 
-        <p class="band-desc">
-            We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+            <p class="band-desc">
+                We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed
+                do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
 
-        <div class="band-wrap">
-            <div class="band-wrap-item">
-                <p class="name">Name</p>
-                <div class="img">
-                    <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Photo">
+            <div class="row">
+                <div class="col l-3 m-4 c-12">
+                    <div class="band-wrap-item">
+                        <p class="name">Name</p>
+                        <div class="img">
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Photo">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="band-wrap-item">
-                <p class="name">Name</p>
-                <div class="img">
-                    <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Photo">
+                <div class="col l-3 m-4 c-12">
+                    <div class="band-wrap-item">
+                        <p class="name">Name</p>
+                        <div class="img">
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Photo">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="band-wrap-item">
-                <p class="name">Name</p>
-                <div class="img">
-                    <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Photo">
+                <div class="col l-3 m-4 c-12">
+                    <div class="band-wrap-item">
+                        <p class="name">Name</p>
+                        <div class="img">
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Photo">
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-3 m-4 c-12">
+                    <div class="band-wrap-item">
+                        <p class="name">Name</p>
+                        <div class="img">
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Photo">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="tour">
-        <div class="tour-container">
+        <div class="grid wide">
+            <div class="tour-container">
             <h2 class="tour-title title">Tour Dates</h2>
 
             <p class="tour-reminder slogan">Remember to book your tickets!</p>
@@ -128,9 +150,13 @@
             </div>
 
             <ul class="tour-ticket">
-                <!-- List ticket -->
+                <div class="row" id="tour-ticket-list">
+                    <!-- List ticket -->
+                </div>
             </ul>
         </div>
+    </div>
+        
 
     </div>
 
@@ -183,7 +209,7 @@
             <i class="fa-brands fa-pinterest-p icon"></i>
         </a>
         <a href="#" target="_blank">
-           <i class="fa-brands fa-twitter icon"></i> 
+            <i class="fa-brands fa-twitter icon"></i>
         </a>
         <a href="#" target="_blank">
             <i class="fa-brands fa-linkedin-in icon"></i>

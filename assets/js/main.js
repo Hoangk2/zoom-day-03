@@ -17,6 +17,12 @@ const ticketsCard = [
     description: "Praesent tincidunt sed tellus ut rutrum sed vitae justo.",
     src: "https://www.w3schools.com/w3images/sanfran.jpg"
   },
+  {
+    city: "San Francisco",
+    date: "Sun 29 Nov 2016",
+    description: "Praesent tincidunt sed tellus ut rutrum sed vitae justo.",
+    src: "https://www.w3schools.com/w3images/sanfran.jpg"
+  },
 ];
 
 // Khi website tải xong thì sẽ hiển thị tickets card
@@ -27,23 +33,26 @@ document.addEventListener("DOMContentLoaded", function() {
 function renderTickets() {
     let html = "";
 
-    for (let i = 0; i < ticketsCard.length; i++) {
-        const ticket = ticketsCard[i];
+    for (let i = 0; i < ticketsCard .length; i++) {
+        const ticket = ticketsCard  [i];
         
         html += `
-            <li class="tour-ticket-item">
-                <img src="${ticket.src}" alt="New York">
-                <div class="wrap">
-                    <h2 class="item-title">${ticket.city}</h2>
-                    <p class="item-time">${ticket.date}</p>
-                    <p class="item-desc text-ellipsis"
-                        title="${ticket.description}">${ticket.description}</p>
-                    <button class="wrap-btn btn">Buy Tickets</button>
-                </div>
-            </li>
+            <div class="col l-3 m-4 c-12">
+                <li class="tour-ticket-item">
+                    <img src="${ticket.src}" alt="New York">
+                    <div class="wrap">
+                        <h2 class="item-title">${ticket.city}</h2>
+                        <p class="item-time">${ticket.date}</p>
+                        <p class="item-desc text-ellipsis"
+                            title="${ticket.description}">${ticket.description}</p>
+                        <button class="wrap-btn btn">Buy Tickets</button>
+                    </div>
+                </li>
+            </div>
         `
     }
 
-    const ticketProducts = document.querySelector(".tour-ticket");
+    const ticketProducts = document.querySelector("#tour-ticket-list");
+    
     ticketProducts.innerHTML = html;
 }
