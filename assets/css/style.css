@@ -30,6 +30,7 @@ body {
 
 a {
     color: var(--text);
+    text-decoration: none;
 }
 
 button {
@@ -140,7 +141,16 @@ button {
 
 .sub-list-item {
     padding: 10px 16px;
-    min-width: 160px;
+    min-width: 130px;
+}
+
+.sub-list-item > a > .icon {
+    float: right;
+    transition: transform 0.1s ease;
+} 
+
+.sub-list-item:hover > a > .icon {
+    transform: rotate(90deg);
 }
 
 .sub-list-item:hover {
@@ -152,6 +162,48 @@ button {
     display: block;
 }
 
+.sub-list-item:last-child {
+    position: absolute;
+    background-color: var(--white);
+}
+
+.sub-list-item:last-child:hover {
+    background-color: var(--gray);
+}
+
+.sub-second-list {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: calc(100% + 4px);
+    background-color: var(--white);
+}
+
+.sub-second-list::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 5px;
+    height: 100%;
+    background-color: transparent;
+
+}
+
+.sub-second-list > li {
+    padding: 10px 16px;
+    min-width: 130px;
+}
+
+.sub-second-list > li:hover {
+    background-color: var(--gray);
+    cursor: pointer;
+}
+
+.sub-list-item:last-child:hover .sub-second-list {
+    display: block;
+}
+
 .header-wrap {
     display: flex;
     align-items: center;
@@ -160,7 +212,7 @@ button {
     height: 35px;
     border-radius: 4px;
     overflow: hidden;
-    height: calc(var(--height-header) - 6px);
+    height: calc(var(--height-header)- 10px);
 }
 
 .header-wrap .input {
@@ -172,27 +224,15 @@ button {
 
 .header-wrap .header-btn {
     position: relative;
-    background-color: var(--white);
+    background-color: var(--gray);
     padding: 0 20px;
-    height: calc(var(--height-header) - 6px);
+    height: calc(var(--height-header) - 10px);
 }
 
 .header-wrap .header-btn:hover {
     cursor: pointer;
-    background-color: var(--gray);
+    background-color: #9c9a9a;
 }
-
-.header-wrap .header-btn::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 1px;
-    height: 30px;
-    transform: translateY(-50%);
-    background-color: var(--gray);
-}
-
 
 .banner {
     height: 100vh;
@@ -222,14 +262,8 @@ button {
 }
 
 #band,
-.tour-container {
+.tour-container, #contact {
    padding: 64px 16px;
-}
-
-#contact {
-    width: 768px;
-    margin: 0 auto;
-    padding: 64px 16px;
 }
 
 .band-desc {
@@ -324,6 +358,7 @@ button {
     flex-direction: column;
     background-color: var(--white);
     flex-basis: 32%;
+    margin-bottom: 4px;
 }
 
 .tour-ticket-item > img {
@@ -382,11 +417,11 @@ button {
 .wrap-form {
     display: flex;
     flex-direction: column;
-    flex-basis: 50%;
 }
 
 .sub-wrap-form {
     display: flex;
+    flex: 1;
 }
 
 .wrap-form input {
@@ -394,6 +429,11 @@ button {
     margin-bottom: 10px;
     border: 1px solid var(--gray);
     font-size: 1.5rem;
+    width: 100%;
+}
+
+.wrap-form-input > input {
+    width: 100%;
 }
 
 .form-input-name {
@@ -435,4 +475,8 @@ button {
 
 .footer > a {
     text-decoration: none;
+}
+
+.footer > p > a {
+    text-decoration: underline;
 }

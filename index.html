@@ -47,7 +47,18 @@
                 <ul class="header-sub-list">
                     <li class="sub-list-item">Merchandise</li>
                     <li class="sub-list-item">Extras</li>
-                    <li class="sub-list-item">Media</li>
+                    <li class="sub-list-item">
+                        <a href="">
+                            Media
+                            <i class="fa-solid fa-caret-right icon"></i>
+                        </a>
+
+                        <ul class="sub-second-list">
+                            <li>Photos</li>
+                            <li>Videos</li>
+                            <li>Audio</li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -161,33 +172,40 @@
     </div>
 
     <div id="contact">
-        <h2 class="contact-title title">Contact</h2>
+        <div class="grid wide">
+            <h2 class="contact-title title">Contact</h2>
 
-        <em class="contact-slogan slogan">Fan? Drop a note!</em>
+            <em class="contact-slogan slogan">Fan? Drop a note!</em>
 
-        <div class="contact-wrap">
-            <div class="wrap-infor">
-                <div class="wrap-infor-item">
-                    <i class="fa-solid fa-location-dot infor-item-icon"></i>
-                    <span class="infor-item-text"> Chicago, US</span>
+            <div class="contact-wrap row">
+                <div class="wrap-infor col l-6 m-12 c-12">
+                    <div class="wrap-infor-item">
+                        <i class="fa-solid fa-location-dot infor-item-icon"></i>
+                        <span class="infor-item-text"> Chicago, US</span>
+                    </div>
+                    <div class="wrap-infor-item">
+                        <i class="fa-solid fa-phone infor-item-icon"></i>
+                        <span class="infor-item-text">Phone: +00 151515</span>
+                    </div>
+                    <div class="wrap-infor-item">
+                        <i class="fa-solid fa-envelope infor-item-icon"></i>
+                        <span class="infor-item-text">Email: mail@mail.com</span>
+                    </div>
                 </div>
-                <div class="wrap-infor-item">
-                    <i class="fa-solid fa-phone infor-item-icon"></i>
-                    <span class="infor-item-text">Phone: +00 151515</span>
-                </div>
-                <div class="wrap-infor-item">
-                    <i class="fa-solid fa-envelope infor-item-icon"></i>
-                    <span class="infor-item-text">Email: mail@mail.com</span>
-                </div>
-            </div>
 
-            <div class="wrap-form">
-                <div class="sub-wrap-form">
-                    <input class="form-input-name" type="text" placeholder="Name" />
-                    <input class="form-input-email" type="text" placeholder="Email" />
+                <div class="wrap-form col l-6 m-12 c-12">
+                    <div class="sub-wrap-form row">
+                        <div class="wrap-form-input col l-6 m-6 c-12">
+                            <input class="form-input-name" type="text" placeholder="Name" />
+                        </div>
+
+                        <div class="wrap-form-input col l-6 m-6 c-12">
+                            <input class="form-input-email" type="text" placeholder="Email" />
+                        </div>
+                    </div>
+                    <input class="form-input-message" type="text" placeholder="Message" />
+                    <button class="form-btn btn">Send</button>
                 </div>
-                <input class="form-input-message" type="text" placeholder="Message" />
-                <button class="form-btn btn">Send</button>
             </div>
         </div>
     </div>
