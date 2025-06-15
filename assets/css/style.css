@@ -389,8 +389,10 @@ button {
     padding: 8px 14px;
 }
 
-.wrap-infor-item  >  i {
-    margin-right: 10px;
+.infor-item-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
 }
 
 .wrap-form {
